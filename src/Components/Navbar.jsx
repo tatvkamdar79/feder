@@ -8,16 +8,15 @@ const Navbar = () => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   return (
-    <nav className={"z-50 w-full h-[90px] fixed top-0 py-2 md:py-6 bg-white"}>
-      <div className="flex items-center justify-between mx-auto w-5/6">
-        {isAboveSmallScreens ? (
-          <>
-            <h4 className="text-3xl font-playfair font-bold">F E D E R</h4>
-            <img src={logo} alt="feder-logo" className="ml-48" />
-          </>
-        ) : (
-          <img src={logo} alt="feder-logo" />
-        )}
+    <nav
+      className={
+        "z-50 w-full fixed top-0 py-2 md:pb-3 bg-white border-b-orange-600 border-b-[3px]"
+      }
+    >
+      <div className="flex items-center justify-between w-full sm:w-5/6 sm:mx-auto">
+        <a href="/home">
+          <img src={logo} alt="feder-logo" className="ml-2 sm:ml-0" />
+        </a>
         {isAboveSmallScreens ? (
           <div className="flex gap-x-8">
             <a
@@ -46,7 +45,7 @@ const Navbar = () => {
             </a>
           </div>
         ) : (
-          <div>
+          <div className="mr-3 sm:mr-0">
             <GiHamburgerMenu size={25} onClick={() => setIsMenuToggled(true)} />
           </div>
         )}

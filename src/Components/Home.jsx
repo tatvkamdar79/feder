@@ -1,22 +1,55 @@
 import React from "react";
 import Card from "./Card";
 import pic from "../Assets/home-drawers.jpg";
+import { categoryNames } from "../Categories/allCategoryNames";
+import useMediaQuery from "../Hooks/useMediaQuery";
+
+const pascalCaseToNormal = (str) => {
+  let result = str.replace(/([A-Z])/g, " $1").toLowerCase();
+  let words = result.split(" ");
+  let capitalizedWords = words.map(
+    (word) => word.charAt(0).toUpperCase() + word.slice(1)
+  );
+  return capitalizedWords.join(" ");
+};
 
 const Home = () => {
+  const isLessThan370 = useMediaQuery("(max-width: 370px)");
+  // console.log(isLessThan370);
   return (
-    <div className="py-[100px] ">
-      <p className="font-playfair font-semibold text-xl py-3 text-center">
-        F E D E R F E D E R F E D E R F E D E R
-        <br />
-        Your text goes here. Your text goes here.
-        <br />
-        Your text goes here. Your text goes here.
-        <br />
-        Your text goes here. Your text goes here.
-        <br />
+    <div className="py-[90px]">
+      <p
+        className={`${
+          isLessThan370 ? "text-3xl gap-x-5" : "text-4xl gap-x-10"
+        } font-playfair font-extrabold sm:text-5xl py-3 flex justify-center`}
+      >
+        <span>F E D E R</span>
+        <span>I N D I A</span>
       </p>
-      <div className="grid grid-cols-2 sm:grid-cols-4 sm:mx-20 place-items-center gap-x-0 sm:gap-x-16 md:gap-x-32 gap-y-10 mt-0 sm:mt-10">
-        <Card
+      <div className="flex justify-center">
+        <p className="text-xl font-bold font-playfair text-center w-5/6">
+          Bring home beautiful interiors that fit your budget.
+        </p>
+      </div>
+      <div className="flex justify-center">
+        <p className="w-5/6 text-lg font-playfair font-medium mt-1 text-center">
+          Experience unmatched quality and satisfaction.
+        </p>
+      </div>
+      <div
+        className={`grid ${
+          isLessThan370 ? "grid-cols-1" : "grid-cols-2"
+        } sm:grid-cols-3 pt-3 sm:pt-0 sm:mx-10 place-items-center gap-x-0 sm:gap-x-16 md:gap-x-14 gap-y-16 mt-0 sm:mt-10`}
+      >
+        {categoryNames.map(({ id, name }) => (
+          <Card
+            key={id}
+            title={pascalCaseToNormal(name)}
+            img={pic}
+            link={"/products/category1"}
+          />
+        ))}
+        {/* <Card
           title={"Product Category 1"}
           img={pic}
           link={"/products/category1"}
@@ -55,7 +88,7 @@ const Home = () => {
           title={"Product Category 8"}
           img={pic}
           link={"/products/category8"}
-        />
+        /> */}
       </div>
     </div>
   );
