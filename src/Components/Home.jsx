@@ -23,8 +23,12 @@ const Home = () => {
           isLessThan370 ? "text-3xl gap-x-5" : "text-4xl gap-x-10"
         } font-playfair font-extrabold sm:text-5xl py-3 flex justify-center`}
       >
-        <span>F E D E R</span>
-        <span>I N D I A</span>
+        <span className="bg-gradient-to-r from-orange-700 to-gray-700 bg-clip-text text-transparent">
+          F E D E R
+        </span>
+        <span className="bg-gradient-to-r from-gray-700 to-orange-700 bg-clip-text text-transparent">
+          I N D I A
+        </span>
       </p>
       <div className="flex justify-center">
         <p className="text-xl font-bold font-playfair text-center w-5/6">
@@ -39,7 +43,7 @@ const Home = () => {
       <div
         className={`grid ${
           isLessThan370 ? "grid-cols-1" : "grid-cols-2"
-        } sm:grid-cols-3 pt-3 sm:pt-0 sm:mx-10 place-items-center gap-x-0 sm:gap-x-16 md:gap-x-14 gap-y-16 mt-0 sm:mt-10`}
+        } sm:grid-cols-3 pt-3 sm:pt-0 sm:mx-10 place-items-center gap-x-0 sm:gap-x-16 md:gap-x-14 gap-y-8 sm:gap-y-16 mt-0 sm:mt-10`}
       >
         {categoryNames.map(({ id, name }) => (
           <Card
