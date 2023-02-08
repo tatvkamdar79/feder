@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-for (let j = 1; j <= 10; j++) {
+for (let j = 1; j <= 23; j++) {
   let data = {};
   data["products"] = [];
   console.log(data);

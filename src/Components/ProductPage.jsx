@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import allCategories from "../Categories/index";
 import useMediaQuery from "../Hooks/useMediaQuery";
+import Carousel from "./Carousel";
 // import Carousel from "./Carousel";
 
 const ProductPage = () => {
@@ -45,11 +46,11 @@ const ProductPage = () => {
           </div>
         </div>
       )}
-      <div className="relative top-[3%] sm:top-[30%] w-5/6 mx-auto">
+      <div className="relative sm:top-[30%] w-screen sm:w-screen mx-auto">
         <h1 className="text-2xl font-semibold font-playfair text-center">
-          Other products you may like
+          Related Products
         </h1>
-        {/* <Carousel category={category}/> */}
+        <Carousel category={category} id={id} />
       </div>
     </div>
   );

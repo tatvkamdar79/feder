@@ -45,12 +45,12 @@ const Home = () => {
           isLessThan370 ? "grid-cols-1" : "grid-cols-2"
         } sm:grid-cols-3 pt-3 sm:pt-0 sm:mx-10 place-items-center gap-x-0 sm:gap-x-16 md:gap-x-14 gap-y-8 sm:gap-y-16 mt-0 sm:mt-10`}
       >
-        {categoryNames.map(({ id, name }) => (
+        {categoryNames.map(({ id, name, category }) => (
           <Card
             key={id}
             title={pascalCaseToNormal(name)}
             img={pic}
-            link={"/products/category1"}
+            link={category}
           />
         ))}
         {/* <Card

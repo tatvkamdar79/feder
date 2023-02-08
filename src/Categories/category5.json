@@ -4,140 +4,140 @@
       "id": 1,
       "name": "Product 1",
       "image": "https://picsum.photos/370/270",
-      "price": 1935,
+      "price": 1453,
       "description": "This is a description"
     },
     {
       "id": 2,
       "name": "Product 2",
       "image": "https://picsum.photos/370/270",
-      "price": 1563,
+      "price": 1928,
       "description": "This is a description"
     },
     {
       "id": 3,
       "name": "Product 3",
       "image": "https://picsum.photos/370/270",
-      "price": 1289,
+      "price": 1512,
       "description": "This is a description"
     },
     {
       "id": 4,
       "name": "Product 4",
       "image": "https://picsum.photos/370/270",
-      "price": 1999,
+      "price": 1617,
       "description": "This is a description"
     },
     {
       "id": 5,
       "name": "Product 5",
       "image": "https://picsum.photos/370/270",
-      "price": 1789,
+      "price": 1444,
       "description": "This is a description"
     },
     {
       "id": 6,
       "name": "Product 6",
       "image": "https://picsum.photos/370/270",
-      "price": 1449,
+      "price": 1634,
       "description": "This is a description"
     },
     {
       "id": 7,
       "name": "Product 7",
       "image": "https://picsum.photos/370/270",
-      "price": 1715,
+      "price": 1918,
       "description": "This is a description"
     },
     {
       "id": 8,
       "name": "Product 8",
       "image": "https://picsum.photos/370/270",
-      "price": 1549,
+      "price": 1228,
       "description": "This is a description"
     },
     {
       "id": 9,
       "name": "Product 9",
       "image": "https://picsum.photos/370/270",
-      "price": 1677,
+      "price": 1683,
       "description": "This is a description"
     },
     {
       "id": 10,
       "name": "Product 10",
       "image": "https://picsum.photos/370/270",
-      "price": 1413,
+      "price": 1650,
       "description": "This is a description"
     },
     {
       "id": 11,
       "name": "Product 11",
       "image": "https://picsum.photos/370/270",
-      "price": 1579,
+      "price": 1260,
       "description": "This is a description"
     },
     {
       "id": 12,
       "name": "Product 12",
       "image": "https://picsum.photos/370/270",
-      "price": 1675,
+      "price": 1345,
       "description": "This is a description"
     },
     {
       "id": 13,
       "name": "Product 13",
       "image": "https://picsum.photos/370/270",
-      "price": 1822,
+      "price": 1812,
       "description": "This is a description"
     },
     {
       "id": 14,
       "name": "Product 14",
       "image": "https://picsum.photos/370/270",
-      "price": 1221,
+      "price": 1480,
       "description": "This is a description"
     },
     {
       "id": 15,
       "name": "Product 15",
       "image": "https://picsum.photos/370/270",
-      "price": 1909,
+      "price": 1863,
       "description": "This is a description"
     },
     {
       "id": 16,
       "name": "Product 16",
       "image": "https://picsum.photos/370/270",
-      "price": 1748,
+      "price": 1739,
       "description": "This is a description"
     },
     {
       "id": 17,
       "name": "Product 17",
       "image": "https://picsum.photos/370/270",
-      "price": 1910,
+      "price": 1900,
       "description": "This is a description"
     },
     {
       "id": 18,
       "name": "Product 18",
       "image": "https://picsum.photos/370/270",
-      "price": 1571,
+      "price": 1244,
       "description": "This is a description"
     },
     {
       "id": 19,
       "name": "Product 19",
       "image": "https://picsum.photos/370/270",
-      "price": 1936,
+      "price": 1878,
       "description": "This is a description"
     },
     {
       "id": 20,
       "name": "Product 20",
       "image": "https://picsum.photos/370/270",
-      "price": 1315,
+      "price": 1500,
       "description": "This is a description"
     }
   ]
