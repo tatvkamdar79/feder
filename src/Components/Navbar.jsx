@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useMediaQuery from "../Hooks/useMediaQuery";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { IoClose } from "react-icons/io5";
+import { MdClose } from "react-icons/md";
 import logo from "../Assets/logo.png";
 
 const Navbar = () => {
@@ -51,7 +51,7 @@ const Navbar = () => {
         )}
         {!isAboveSmallScreens && isMenuToggled && (
           <div className="fixed flex flex-col right-0 bottom-0 h-screen bg-gradient-to-b from-grey via-grey to-slate-200 w-[70%]">
-            <IoClose
+            <MdClose
               size={35}
               className="mt-5 mb-10 ml-3"
               onClick={() => setIsMenuToggled(false)}
