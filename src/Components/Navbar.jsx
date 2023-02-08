@@ -53,7 +53,7 @@ const Navbar = () => {
           <div className="fixed flex flex-col right-0 bottom-0 h-screen bg-gradient-to-b from-grey via-grey to-slate-200 w-[70%]">
             <MdClose
               size={35}
-              className="mt-5 mb-10 ml-3"
+              className="mt-[100px] mb-0 ml-3"
               onClick={() => setIsMenuToggled(false)}
             />
             <a
