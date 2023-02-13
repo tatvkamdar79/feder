@@ -29,7 +29,7 @@ const Carousel = () => {
   let arr = relatedProducts.map(({ id, name, image, description }) => (
     <a
       key={id}
-      href={`/products/${category}/${id}`}
+      href={`/products/${category}/${name}`}
       className={`md:w-[340px] shadow-xl hover:scale-105 transition duration-500 rounded-lg`}
     >
       <img src={image} alt="prod img" className={`rounded-lg`} />
