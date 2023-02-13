@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import allCategories from "../Categories/index";
+import allCategories from "../Assets/Categories/index";
 import { useParams } from "react-router-dom";
-import { BiRupee } from "react-icons/bi";
+// import { BiRupee } from "react-icons/bi";
 import useMediaQuery from "../Hooks/useMediaQuery";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
@@ -9,21 +9,24 @@ const Carousel = () => {
   const isLessThan500 = useMediaQuery("(max-width: 500px)");
   const isAbove1060 = useMediaQuery("(min-width: 1060px)");
   // console.log(isAbove1060);
-  const { category, id } = useParams();
+  const { category, name } = useParams();
+  const productName = name;
   const strCategory = String(category);
-  const idx = parseInt(strCategory[strCategory.length - 1]) - 1;
-
-  const currArr = allCategories[idx].products;
-  // console.log(currArr);
+  const categoryProducts = allCategories[strCategory].products;
+  // console.log(categoryProducts);
   const relatedProducts = [];
-  const currId = parseInt(id);
-  for (let i = 1; i <= 5; i++) {
-    // console.log(i + currId);
-    relatedProducts.push(currArr[(currId + i - 1) % 20]);
+  for (
+    let i = 0;
+    i < categoryProducts.length && relatedProducts.length < 5;
+    i++
+  ) {
+    if (categoryProducts[i].name !== productName) {
+      relatedProducts.push(categoryProducts[i]);
+    }
   }
   // console.log(relatedProducts);
 
-  let arr = relatedProducts.map(({ id, name, image, price, description }) => (
+  let arr = relatedProducts.map(({ id, name, image, description }) => (
     <a
       key={id}
       href={`/products/${category}/${id}`}
@@ -33,12 +36,12 @@ const Carousel = () => {
       <span className="flex pt-1 text-center text-lg font-semibold font-serif justify-center relative">
         {name}
       </span>
-      <p className="px-2 font-mono font-normal text-md">
+      {/* <p className="px-2 font-mono font-normal text-md">
         <BiRupee size={16} className="inline" /> {price}/-
-      </p>
+      </p> */}
     </a>
   ));
-  //   console.log(arr);
+  // console.log(arr);
 
   const [index, setIndex] = useState(0);
 
@@ -51,12 +54,12 @@ const Carousel = () => {
   };
 
   return (
-    <div>
+    <div className="flex w-full mx-auto justify-center">
       {isAbove1060 ? (
         <div className="flex flex-row justify-center items-center gap-x-4 py-5 w-full mx-10">
           {arr}
         </div>
-      ) : (isLessThan500 ? (
+      ) : isLessThan500 ? (
         <div className="flex flex-row justify-center items-center gap-x-4 py-5 w-5/6 mx-auto">
           <button onClick={prevImage}>
             <GrFormPrevious size={25} className="" />
@@ -78,7 +81,7 @@ const Carousel = () => {
             <GrFormNext size={25} className="" />
           </button>
         </div>
-      ))}
+      )}
     </div>
   );
 };

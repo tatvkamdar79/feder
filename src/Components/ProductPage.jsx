@@ -1,21 +1,22 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import allCategories from "../Categories/index";
+import allCategories from "../Assets/Categories/index";
 import useMediaQuery from "../Hooks/useMediaQuery";
-import Carousel from "./Carousel";
-// import Carousel from "./Carousel";
+import Carousel from './Carousel';
 
 const ProductPage = () => {
-  const { category, id } = useParams();
-  // console.log(category, id);
+  const { category, name } = useParams();
+  const productName = name;
   const strCategory = String(category);
-  const idx = parseInt(strCategory[strCategory.length - 1]) - 1;
-  const product = allCategories[idx].products[id - 1];
+  const categoryProducts = allCategories[strCategory].products;
+  const product = categoryProducts.find(
+    ({ id, name, image }) => name === productName
+  );
 
-  const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
+  const isAbove1060 = useMediaQuery("(min-width: 1060px");
   return (
     <div className="py-[100px] h-screen">
-      {isAboveSmallScreens ? (
+      {isAbove1060 ? (
         <div className="mx-auto font-playfair flex w-11/12">
           <img
             src={product.image}
@@ -24,10 +25,10 @@ const ProductPage = () => {
           />
           <div className="w-full text-start mx-10">
             <h1 className="text-2xl font-bold font-playfair mb-5">
-              {product.name} and id -{">"} {product.id}
+              {product.name}
             </h1>
             <p className="text-xl mb-5">{product.description}</p>
-            <p className="text-lg font-bold mb-5">Price: ${product.price}</p>
+            {/* <p className="text-lg font-bold mb-5">Price: ${product.price}</p> */}
           </div>
         </div>
       ) : (
@@ -39,10 +40,10 @@ const ProductPage = () => {
           />
           <div className="py-10 w-5/6 text-start">
             <h1 className="text-2xl font-bold font-playfair mb-5">
-              {product.name} and id -{">"} {product.id}
+              {product.name}
             </h1>
             <p className="text-xl mb-5">{product.description}</p>
-            <p className="text-lg font-bold mb-5">Price: ${product.price}</p>
+            {/* <p className="text-lg font-bold mb-5">Price: ${product.price}</p> */}
           </div>
         </div>
       )}
@@ -50,7 +51,7 @@ const ProductPage = () => {
         <h1 className="text-2xl font-semibold font-playfair text-center">
           Related Products
         </h1>
-        <Carousel category={category} id={id} />
+        <Carousel category={category} name={name} />
       </div>
     </div>
   );
