@@ -15,7 +15,7 @@ const ProductPage = () => {
 
   const isAbove1060 = useMediaQuery("(min-width: 1060px");
   return (
-    <div className="py-[100px] h-screen">
+    <div className="py-[100px]">
       {isAbove1060 ? (
         <div className="mx-auto font-playfair flex w-11/12">
           <img
@@ -47,7 +47,7 @@ const ProductPage = () => {
           </div>
         </div>
       )}
-      <div className="relative sm:top-[30%] w-full mx-auto">
+      <div className="relative sm:top-[30%] w-full mx-auto mt-[10%]">
         <h1 className="text-2xl font-semibold font-playfair text-center">
           Related Products
         </h1>
