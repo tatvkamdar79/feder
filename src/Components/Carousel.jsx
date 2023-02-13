@@ -54,7 +54,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="flex w-full mx-auto justify-center">
+    <div className="flex w-full mx-auto px-2 justify-center">
       {isAbove1060 ? (
         <div className="flex flex-row justify-center items-center gap-x-4 py-5 w-full mx-10">
           {arr}
