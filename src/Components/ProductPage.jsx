@@ -47,7 +47,7 @@ const ProductPage = () => {
           </div>
         </div>
       )}
-      <div className="relative sm:top-[30%] w-screen sm:w-screen mx-auto">
+      <div className="relative sm:top-[30%] w-full mx-auto">
         <h1 className="text-2xl font-semibold font-playfair text-center">
           Related Products
         </h1>
